@@ -12,7 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package me.luzhuo.mvp.callback;
+package me.luzhuo.mvp.model.impl;
+
+import android.content.Context;
+
+import me.luzhuo.mvp.model.IUser;
 
 /**
  * =================================================
@@ -21,9 +25,9 @@ package me.luzhuo.mvp.callback;
  * <p>
  * Version: 1.0
  * <p>
- * Creation Date: 2016/8/21 19:45
+ * Creation Date: 2016/8/21 19:44
  * <p>
- * Description: 全局网络回调接口
+ * Description:
  * <p>
  * Revision History:
  * <p>
@@ -31,12 +35,14 @@ package me.luzhuo.mvp.callback;
  * <p>
  * =================================================
  **/
-public interface GlobalNetCallBack {
+public class IUserImpl implements IUser {
+    @Override
+    public String getUserName(Context context) {
+        return null;
+    }
 
-    /**
-     * 网络数据
-     * @param data 网络数据
-     */
-    void netData(String data);
+    @Override
+    public void saveUserName(Context context, String userName) {
 
+    }
 }
